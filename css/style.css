@@ -22,6 +22,12 @@ td, th { padding:7px 6px; border-bottom:1px solid #243a52; text-align:left; }
 .podium { flex:1; background:var(--card); border-radius:10px; padding:10px;
           text-align:center; font-size:.85rem; }
 .podium.p1 { border:1px solid var(--accent); }
+.whatif-layout { display:grid; grid-template-columns:minmax(0, 1fr); gap:16px; }
+.whatif-panel { min-width:0; }
+.whatif-panel h3 { margin:0 0 10px; }
+.whatif-list { display:grid; gap:6px; }
+.whatif-list .match { margin:0; }
+.whatif-panel #whatif-table table { background:var(--card); border-radius:12px; overflow:hidden; }
 .match { display:flex; justify-content:space-between; align-items:center;
          background:var(--card); border-radius:10px; padding:10px; margin:6px 0; }
 .match.live { border-left:3px solid var(--up); }
@@ -37,3 +43,6 @@ td, th { padding:7px 6px; border-bottom:1px solid #243a52; text-align:left; }
                 border:none; border-radius:8px; padding:8px 14px; }
 select { background:var(--card); color:var(--fg); padding:6px;
          border-radius:8px; border:1px solid #2c4763; }
+@media (min-width: 900px) {
+  .whatif-layout { grid-template-columns:minmax(0, 1.15fr) minmax(320px, .85fr); align-items:start; }
+}

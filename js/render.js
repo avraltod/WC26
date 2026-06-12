@@ -55,9 +55,17 @@ export function renderToday(D, live, hypo = {}) {
     `<div class="podium p${i + 1}">${['🥇', '🥈', '🥉'][i]} ${p.emoji} ${esc(codename(p))} <b>${p.total}</b></div>`).join('');
   return `<div class="podium-row">${podium}</div>
     ${liveRows ? `<h3>${t('live')}${liveStamp}</h3>${liveRows}` : ''}
-    <h3>${t('whatif')}</h3>${steppers || `<p>${t('upcoming')}: —</p>`}
-    <button id="reset-whatif">${t('reset')}</button>
-    <div id="whatif-table"></div>`;
+    <div class="whatif-layout">
+      <section class="whatif-panel">
+        <h3>${t('whatif')}</h3>
+        <div class="whatif-list">${steppers || `<p>${t('upcoming')}: —</p>`}</div>
+        <button id="reset-whatif">${t('reset')}</button>
+      </section>
+      <section class="whatif-panel">
+        <h3>Results</h3>
+        <div id="whatif-table"></div>
+      </section>
+    </div>`;
 }
 
 export function renderSims(D, ODDS, PATHS) {
