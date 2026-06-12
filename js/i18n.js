@@ -1,0 +1,26 @@
+const STRINGS = {
+  today: 'Today',
+  standings: 'Standings',
+  sims: 'Simulations',
+  stats: 'Stats',
+  players: 'Players',
+  total: 'Total points',
+  rank: 'Rank',
+  win_odds: 'Win odds',
+  exp_pts: 'Expected points',
+  helps: 'Helps you',
+  hurts: 'Hurts you',
+  whatif: 'What if?',
+  reset: 'Reset',
+  updated: 'Updated',
+  live: 'Live',
+  upcoming: 'Upcoming',
+  exact: 'Exact scores (3pt)',
+  top4: 'Top-4 prediction',
+  vs_ai: 'Humans vs AI',
+  path_to_victory: 'Path to victory',
+  top3: 'Top-3',
+  dist: '3-2-1',
+};
+
+export const t = key => STRINGS[key] ?? key;

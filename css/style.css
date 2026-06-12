@@ -1,0 +1,39 @@
+:root { --bg:#0d1b2a; --card:#16273b; --fg:#e8eef5; --accent:#ffd700;
+        --up:#3fb950; --down:#f85149; font-size:16px; }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--bg); color:var(--fg);
+       font-family:-apple-system,'Segoe UI',Roboto,sans-serif; }
+header { display:flex; align-items:center; gap:12px; padding:10px 14px; }
+header h1 { font-size:1.15rem; margin:0; flex:1; }
+#meta { font-size:.7rem; opacity:.7; }
+nav { display:flex; gap:2px; overflow-x:auto; padding:0 8px;
+      position:sticky; top:0; background:var(--bg); }
+nav a { padding:9px 12px; color:var(--fg); text-decoration:none;
+        border-bottom:3px solid transparent; white-space:nowrap; }
+nav a.active { border-color:var(--accent); color:var(--accent); }
+main { padding:12px; max-width:640px; margin:0 auto; }
+table { width:100%; border-collapse:collapse; }
+td, th { padding:7px 6px; border-bottom:1px solid #243a52; text-align:left; }
+.num { text-align:right; } .who { white-space:nowrap; }
+.up { color:var(--up); } .down { color:var(--down); }
+.spark { width:80px; height:24px; color:var(--accent); }
+.flag { vertical-align:middle; border-radius:2px; }
+.podium-row { display:flex; gap:8px; margin-bottom:14px; }
+.podium { flex:1; background:var(--card); border-radius:10px; padding:10px;
+          text-align:center; font-size:.85rem; }
+.podium.p1 { border:1px solid var(--accent); }
+.match { display:flex; justify-content:space-between; align-items:center;
+         background:var(--card); border-radius:10px; padding:10px; margin:6px 0; }
+.match.live { border-left:3px solid var(--up); }
+.stepper { display:flex; gap:6px; align-items:center; }
+.stepper button { width:28px; height:28px; border-radius:6px; border:none;
+                  background:#2c4763; color:var(--fg); font-size:1rem; }
+.bar { height:10px; background:var(--accent); border-radius:5px; min-width:2px; }
+.player-card { background:var(--card); border-radius:12px; padding:14px;
+               margin:10px 0; }
+.player-card .big { font-size:2.2rem; }
+.meaning { opacity:.7; font-style:italic; margin-top:-6px; }
+#reset-whatif { margin:8px 0; background:#2c4763; color:var(--fg);
+                border:none; border-radius:8px; padding:8px 14px; }
+select { background:var(--card); color:var(--fg); padding:6px;
+         border-radius:8px; border:1px solid #2c4763; }
